@@ -1,0 +1,28 @@
+#grid {
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: nowrap;
+    aspect-ratio: 1 / 1;
+
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.cell {
+    flex: 1;
+    aspect-ratio: 1/1;
+    background-color: bisque;
+    margin: 1px;
+}
+
+.cell_new {
+    flex: 1;
+    aspect-ratio: 1/1;
+    background-color: slategrey;
+    margin: 1px;
+}
