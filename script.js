@@ -1,13 +1,13 @@
 let grid = document.querySelector('#grid');
 
 
-    for (i = 0; i < 19; i++) {
+    for (i = 0; i < 36; i++) {
         let div = document.createElement("div");
         div.setAttribute("class", "column");
         grid.appendChild(div);
     };
 
-    for (i = 0; i < 19; i++) {
+    for (i = 0; i < 36; i++) {
         let elements = document.querySelectorAll(".column");
         let div = document.createElement("div");
         
