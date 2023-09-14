@@ -1,10 +1,29 @@
 let grid = document.querySelector('#grid');
+let btn_resize = document.querySelector(".btn-resize");
 
 
 
+btn_resize.addEventListener('click', function(){
+    const sizeInput = prompt("Choose grid size (1-100):");
+    console.log(sizeInput);
+    create_grid(sizeInput);
+    
+});
+
+
+//Any create_grid function calls after the first one keep adding 
+//new divs to the grid
+//find a way to clear grid of all divs before calling the function again
+function clear() {
+    document.querySelectorAll(".column").forEach(e => e.remove());
+};
 
 //Grid making function
 function create_grid(grid_size) {
+
+    clear();
+
+
     for (i = 0; i < grid_size; i++) {
         let div = document.createElement("div");
         div.setAttribute("class", "column");
@@ -21,6 +40,7 @@ function create_grid(grid_size) {
             element.appendChild(div.cloneNode(true));
         });
     };
+
 
     sketch();
 
@@ -39,7 +59,9 @@ function sketch() {
     });
 };
 
-create_grid(24);
+create_grid(2);
+
+
 
 
 
