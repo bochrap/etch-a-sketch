@@ -1,13 +1,13 @@
 let grid = document.querySelector('#grid');
 
-
-    for (i = 0; i < 36; i++) {
+function create_grid(grid_size) {
+    for (i = 0; i < grid_size; i++) {
         let div = document.createElement("div");
         div.setAttribute("class", "column");
         grid.appendChild(div);
     };
 
-    for (i = 0; i < 36; i++) {
+    for (i = 0; i < grid_size; i++) {
         let elements = document.querySelectorAll(".column");
         let div = document.createElement("div");
         
@@ -18,6 +18,12 @@ let grid = document.querySelector('#grid');
         });
     };
 
+    sketch();
+
+};
+
+
+function sketch() {
     let cell = document.querySelector('.cell');
     let cells = document.querySelectorAll('.cell');
 
@@ -27,6 +33,7 @@ let grid = document.querySelector('#grid');
             element.classList.add("cell_new");
         });
     });
+};
 
 
 
