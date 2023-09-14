@@ -1,5 +1,9 @@
 let grid = document.querySelector('#grid');
 
+
+
+
+//Grid making function
 function create_grid(grid_size) {
     for (i = 0; i < grid_size; i++) {
         let div = document.createElement("div");
@@ -22,7 +26,7 @@ function create_grid(grid_size) {
 
 };
 
-
+//Basic sketching function
 function sketch() {
     let cell = document.querySelector('.cell');
     let cells = document.querySelectorAll('.cell');
@@ -34,6 +38,8 @@ function sketch() {
         });
     });
 };
+
+create_grid(24);
 
 
 

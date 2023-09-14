@@ -1,5 +1,17 @@
 body {
     display: flex;
+    flex-direction: column;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    height: 50px;
+    width: 90px;
+    margin: 15px;
 }
 
 #grid {
