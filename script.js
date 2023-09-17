@@ -1,5 +1,7 @@
+let currentSize = 16;
 let grid = document.querySelector('#grid');
 let btn_resize = document.querySelector(".btn-resize");
+let btn_reset = document.querySelector(".btn-reset");
 
 
 
@@ -7,6 +9,11 @@ btn_resize.addEventListener('click', function(){
     const sizeInput = prompt("Choose grid size (1-100):");
     console.log(sizeInput);
     create_grid(sizeInput);
+    
+});
+
+btn_reset.addEventListener('click', function(){
+    create_grid(currentSize);
     
 });
 
@@ -22,6 +29,7 @@ function clear() {
 function create_grid(grid_size) {
 
     clear();
+    currentSize = grid_size;
 
 
     for (i = 0; i < grid_size; i++) {
@@ -59,7 +67,7 @@ function sketch() {
     });
 };
 
-create_grid(2);
+create_grid(16);
 
 
 
