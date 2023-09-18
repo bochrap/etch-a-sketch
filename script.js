@@ -2,6 +2,8 @@ let currentSize = 16;
 let grid = document.querySelector('#grid');
 let btn_resize = document.querySelector(".btn-resize");
 let btn_reset = document.querySelector(".btn-reset");
+let rainbow_colors = ["f94144", "f3722c", "f8961e", "f9844a", "f9c74f", "90be6d", "43aa8b", "4d908e", "577590", "277da1"];
+var random_color = rainbow_colors[Math.floor(Math.random()*rainbow_colors.length)];
 
 
 
@@ -56,7 +58,6 @@ function create_grid(grid_size) {
 
 //Basic sketching function
 function sketch() {
-    let cell = document.querySelector('.cell');
     let cells = document.querySelectorAll('.cell');
 
     cells.forEach(element => {
@@ -66,6 +67,9 @@ function sketch() {
         });
     });
 };
+
+
+
 
 create_grid(16);
 

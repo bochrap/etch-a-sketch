@@ -1,19 +1,27 @@
 body {
     display: flex;
-    flex-direction: column;
     background-color: black;
+    margin: 15px;
 }
 
 #buttons {
+
+    width: 200px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #212121
+    ;
+    margin-right: 15px;
 }
 
-.button {
+/*.button {
     height: 50px;
     width: 90px;
     margin: 15px;
-}
+} */
 
 #grid {
     width: 700px;
@@ -44,65 +52,52 @@ body {
     margin: 1px;
 }
 
-
-button {
-    --black: #000000;
-    --ch-black: #141414;
-    --eer-black: #1b1b1b;
-    --night-rider: #2e2e2e;
-    --white: #ffffff;
-    --af-white: #f3f3f3;
-    --ch-white: #e1e1e1;
-    border-radius: 8px;
-    width: 140px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 0px 15px;
-    border: none;
-    color: white;
-    position: relative;
-    cursor: pointer;
-    font-weight: 700;
-    transition-duration: .2s;
-    background-color: var(--ch-black);
-  }
-  
-  button:before, .button:after {
-    content: '';
-    position: absolute;
-    left: -2px;
-    top: -2px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, 
-    var(--ch-black), var(--eer-black),
-    var(--night-rider), var(--ch-white), var(--night-rider), 
-      var(--eer-black), var(--ch-black),var(--ch-black));
-    background-size: 400%;
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    z-index: -1;
-    animation: steam 20s linear infinite;
-  }
-  
-  @keyframes steam {
-    0% {
-      background-position: 0 0;
-    }
-  
-    50% {
-      background-position: 400% 0;
-    }
-  
-    100% {
-      background-position: 0 0;
-    }
-  }
-  
-  button:after {
-    filter: blur(50px);
-  }
-  
-  
+.btn {
+  width: 180px;
+  height: 70px;
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: inline-block;
+  border-radius: 6em;
+  transition: all .2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+ }
+ 
+ .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+ }
+ 
+ .btn::after {
+  background-color: #fff;
+ }
+ 
+ .btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+ }
