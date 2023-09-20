@@ -52,7 +52,7 @@ function create_grid(grid_size) {
     };
 
 
-    sketch();
+    sketch_rainbow();
 
 };
 
@@ -64,6 +64,17 @@ function sketch() {
         element.addEventListener("mouseover", (event) => {
             element.classList.remove("cell");
             element.classList.add("cell_new");
+        });
+    });
+};
+
+function sketch_rainbow() {
+    let cells = document.querySelectorAll('.cell', '.cell_color1', '.cell_color2', '.cell_color3', '.cell_color4', '.cell_color5', '.cell_color6', '.cell_color7', '.cell_color8', '.cell_color9', '.cell_color10');
+
+    cells.forEach(element => {
+        element.addEventListener("mouseover", (event) => {
+            element.removeAttribute("class");
+            element.classList.add(`cell_color${Math.floor(Math.random() * 10) + 1}`);
         });
     });
 };
