@@ -2,8 +2,8 @@ let currentSize = 16;
 let grid = document.querySelector('#grid');
 let btn_resize = document.querySelector(".btn-resize");
 let btn_reset = document.querySelector(".btn-reset");
-let rainbow_colors = ["f94144", "f3722c", "f8961e", "f9844a", "f9c74f", "90be6d", "43aa8b", "4d908e", "577590", "277da1"];
-var random_color = rainbow_colors[Math.floor(Math.random()*rainbow_colors.length)];
+let btn_mode = document.querySelector(".btn-mode");
+let isRainbow = false;
 
 
 
@@ -17,6 +17,16 @@ btn_resize.addEventListener('click', function(){
 btn_reset.addEventListener('click', function(){
     create_grid(currentSize);
     
+});
+
+btn_mode.addEventListener('click', function(){
+    if (isRainbow === false) {
+        isRainbow = true;
+    }
+    else if (isRainbow === true) {
+        isRainbow = false;
+    }
+    sketch();
 });
 
 
@@ -51,30 +61,23 @@ function create_grid(grid_size) {
         });
     };
 
-
-    sketch_rainbow();
+        sketch();
+    
 
 };
 
-//Basic sketching function
+
 function sketch() {
-    let cells = document.querySelectorAll('.cell');
-
-    cells.forEach(element => {
-        element.addEventListener("mouseover", (event) => {
-            element.classList.remove("cell");
-            element.classList.add("cell_new");
-        });
-    });
-};
-
-function sketch_rainbow() {
-    let cells = document.querySelectorAll('.cell', '.cell_color1', '.cell_color2', '.cell_color3', '.cell_color4', '.cell_color5', '.cell_color6', '.cell_color7', '.cell_color8', '.cell_color9', '.cell_color10');
+    let cells = document.querySelectorAll('.cell', '.cell_new', '.cell_color1', '.cell_color2', '.cell_color3', '.cell_color4', '.cell_color5', '.cell_color6', '.cell_color7', '.cell_color8', '.cell_color9', '.cell_color10');
 
     cells.forEach(element => {
         element.addEventListener("mouseover", (event) => {
             element.removeAttribute("class");
+
+            if (isRainbow === true) {
             element.classList.add(`cell_color${Math.floor(Math.random() * 10) + 1}`);
+            }
+            else {element.classList.add("cell_new");};
         });
     });
 };
