@@ -3,14 +3,20 @@ let grid = document.querySelector('#grid');
 let btn_resize = document.querySelector(".btn-resize");
 let btn_reset = document.querySelector(".btn-reset");
 let btn_mode = document.querySelector(".btn-mode");
+let footer = document.querySelector(".footer");
 let isRainbow = false;
 
 
 
 btn_resize.addEventListener('click', function(){
     const sizeInput = prompt("Choose grid size (1-100):");
-    console.log(sizeInput);
+    if (sizeInput > 100) {
+        create_grid(100);
+        alert("Max grid size is 100!");
+    }
+    else {
     create_grid(sizeInput);
+    };
     
 });
 
@@ -22,19 +28,19 @@ btn_reset.addEventListener('click', function(){
 btn_mode.addEventListener('click', function(){
     if (isRainbow === false) {
         isRainbow = true;
-        btn_mode.textContent = "COLOR MODE :)"
+        btn_mode.innerHTML = "COLOR MODE &#128526;"
+        footer.setAttribute("class", "footer-disco");
     }
     else if (isRainbow === true) {
         isRainbow = false;
-        btn_mode.textContent = "COLOR MODE :("
+        btn_mode.innerHTML = "COLOR MODE &#128542;"
+        footer.setAttribute("class", "footer");
     }
     sketch();
 });
 
 
-//Any create_grid function calls after the first one keep adding 
-//new divs to the grid
-//find a way to clear grid of all divs before calling the function again
+//Clear the grid from all color changes
 function clear() {
     document.querySelectorAll(".column").forEach(e => e.remove());
 };

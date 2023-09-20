@@ -1,7 +1,57 @@
 body {
     display: flex;
+    flex-direction: column;
     background-color: black;
     margin: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    display: flex;
+    background-color: black;
+    margin: 15px;
+    justify-content: center;
+}
+
+.footer-disco {
+    width: 915px;
+    height: 30px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #f94144, #f3722c, #f8961e, #f9844a, #f9c74f, #90be6d, #43aa8b, #4d908e, #577590, #277da1);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+.footer {
+    width: 915px;
+    height: 30px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-45deg, #505050, #373737, #6f6f6f, #adadad );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+p {
+    word-spacing: 2px;
 }
 
 #buttons {
@@ -12,7 +62,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #212121
+    background-color: #505050;
     ;
     margin-right: 15px;
 }
@@ -48,7 +98,7 @@ body {
 .cell_new {
     flex: 1;
     aspect-ratio: 1/1;
-    background-color: slategrey;
+    background-color: #505050;
     margin: 1px;
 }
 
