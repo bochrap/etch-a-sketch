@@ -22,9 +22,11 @@ btn_reset.addEventListener('click', function(){
 btn_mode.addEventListener('click', function(){
     if (isRainbow === false) {
         isRainbow = true;
+        btn_mode.textContent = "COLOR MODE :)"
     }
     else if (isRainbow === true) {
         isRainbow = false;
+        btn_mode.textContent = "COLOR MODE :("
     }
     sketch();
 });
