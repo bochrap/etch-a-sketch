@@ -5,11 +5,15 @@ body {
     margin: 15px;
     justify-content: center;
     align-items: center;
+    background-image: url("background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 20px -90px;
 }
 
 .content {
     display: flex;
-    background-color: black;
+    background-color: rgba(255, 255, 255, 0);
     margin: 15px;
     justify-content: center;
 }
@@ -24,6 +28,7 @@ body {
     background: linear-gradient(-45deg, #f94144, #f3722c, #f8961e, #f9844a, #f9c74f, #90be6d, #43aa8b, #4d908e, #577590, #277da1);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+    font-weight: 600;
 }
 
 .footer {
@@ -36,6 +41,7 @@ body {
     background: linear-gradient(-45deg, #505050, #373737, #6f6f6f, #adadad );
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
+    font-weight: 600;
 }
 
 @keyframes gradient {
@@ -62,8 +68,7 @@ p {
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
-    background-color: #505050;
-    ;
+    background: rgba(80, 80, 80, 0.7);
     margin-right: 15px;
 }
 
@@ -79,6 +84,7 @@ p {
     display: flex;
     flex-wrap: nowrap;
     aspect-ratio: 1 / 1;
+    background-color: black;
 
 }
 
@@ -90,84 +96,72 @@ p {
 
 .cell {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: bisque;
     margin: 1px;
 }
 
 .cell_new {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #505050;
     margin: 1px;
 }
 
 .cell_color1 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #f94144 ;
     margin: 1px;
 }
 
 .cell_color2 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #f3722c ;
     margin: 1px;
 }
 
 .cell_color3 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #f8961e ;
     margin: 1px;
 }
 
 .cell_color4 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #f9844a;
     margin: 1px;
 }
 
 .cell_color5 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #f9c74f;
     margin: 1px;
 }
 
 .cell_color6 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #90be6d;
     margin: 1px;
 }
 
 .cell_color7 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #43aa8b;
     margin: 1px;
 }
 
 .cell_color8 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #4d908e;
     margin: 1px;
 }
 
 .cell_color9 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #577590;
     margin: 1px;
 }
 
 .cell_color10 {
     flex: 1;
-    aspect-ratio: 1/1;
     background-color: #277da1;
     margin: 1px;
 }
